@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <listeners>
+    <listener class-name="extentReportExample.IBMListenersDemo"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="AnnotationExample.AmazonExamplePriroity"/>
+      <class name="controlExample.BaseTest"/>
+      <class name="handleWindows.IRCTCWindowsExample"/>
+      <class name="AnnotationExample.AmazonExamplePriroity"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="AnnotationExample.AmazonExamplePriroity">
+        <methods>
+          <include name="launchapp"/>
+          <include name="closeapp"/>
+        </methods>
+      </class> <!-- AnnotationExample.AmazonExamplePriroity -->
+      <class name="handleWindows.IRCTCWindowsExample">
+        <methods>
+          <include name="verifyLogin"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- handleWindows.IRCTCWindowsExample -->
+      <class name="controlExample.BaseTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- controlExample.BaseTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
